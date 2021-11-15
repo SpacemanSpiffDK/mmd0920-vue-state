@@ -1,22 +1,13 @@
 <template>
   <div>
     <h1>To-Do List</h1>
-    <div id="count">Todo count: {{ $store.getters.todoCount }}</div>
-    <div>
-      <TodoNew />
-      <TodoList />
-    </div>
   </div>
 </template>
 <script>
-import TodoNew from "./components/TodoNew.vue";
-import TodoList from "./components/TodoList.vue";
+
 
 export default {
-  components: {
-    TodoNew,
-    TodoList
-  }
+
 };
 </script>
 
