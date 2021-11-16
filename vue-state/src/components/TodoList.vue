@@ -2,9 +2,7 @@
   <ul>
     <li v-for="todo in todos" :key="todo.id">
       {{ todo.task }}
-      <button @click="this.$store.commit('deleteTodoItem', { todo })">
-        Done
-      </button>
+      <button @click="deleteItem(todo.id)">Done {{ todo.id }}</button>
     </li>
   </ul>
 </template>
@@ -14,7 +12,12 @@ export default {
   computed: {
     todos() {
       return this.$store.getters.getTodos;
-    }
+    },
+  },
+  methods: {
+    deleteItem(item) {
+      this.$store.commit("deleteTodoItem", { item });
+    },
   },
 };
 </script>
