@@ -15,7 +15,7 @@ export default createStore({
     },
     deleteTodoItem: (state, item) => {
       // find the index of the item with the id we are looking for
-      const i = state.todos.map(todo => todo.id).indexOf(parseInt(item.itemId)); 
+      const i = state.todos.map(todo => todo.id).indexOf(parseInt(item.item)); 
       // at position i, remove 1 item
       state.todos.splice(i, 1); 
     }
